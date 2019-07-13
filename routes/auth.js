@@ -19,7 +19,7 @@ router.post(
       .normalizeEmail(),
     body("password", "Please enter a valid password")
       .isLength({ min: 5 })
-      .isAlphanumberic()
+      .isAlphanumeric()
       .trim()
   ],
   authController.postLogin
@@ -31,7 +31,7 @@ router.post(
     check("email")
       .isEmail()
       .withMessage("Please enter a valid email")
-      .customer((value, { req }) => {
+      .custom((value, { req }) => {
         // if (value === "test@test.com") {
         //   throw new Error("this email address is forbidden");
         // }
@@ -45,7 +45,7 @@ router.post(
       .normalizeEmail(),
     body("password", "Please enter a valid password")
       .isLength({ min: 5 })
-      .isAlphanumberic()
+      .isAlphanumeric()
       .trim(),
     body("confirmPassword")
       .custom((value, { req }) => {
