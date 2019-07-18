@@ -248,3 +248,21 @@ form {
   border-color: rgb(228, 118, 118);
   background: rgb(238, 156, 156);
 }
+
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: blue;
+  padding: 0.05rem;
+  border: 1px solid blue;
+  margin: 0 1rem;
+}
+.pagination a:hover,
+.pagination a:active {
+  background: green;
+  color: white;
+}
